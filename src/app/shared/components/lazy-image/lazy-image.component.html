@@ -1,0 +1,19 @@
+
+<figure class="lazy-image">
+    <img
+        [src]     ="url"
+        [alt]     ="alt"
+        class     ="gif-image card-img-top animate__animated animate__fadeIn"
+        (load)    ="onLoad()"
+        [ngStyle] ="{ display: hasLoaded ? '' : 'none'}"
+    />
+
+    <img
+        *ngIf="!hasLoaded"
+        src="assets/loader.svg"
+        width="35"
+        height="35"
+        class="mt-3"
+        alt="loader"
+    />
+</figure>
